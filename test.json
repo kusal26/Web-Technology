@@ -1,0 +1,13 @@
+{
+    "name":"hello",
+    "roll no":5,
+    "location":{
+        "city": "Banepa",
+        "street":{
+            "stree_no": 905
+        }
+    }
+
+}
+
+
