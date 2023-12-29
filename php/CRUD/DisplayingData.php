@@ -53,8 +53,8 @@ if(mysqli_num_rows($result)>0)
         echo '<td>'. $row['number'] .'</td>';
         echo '<td><a href="edit.php?id=' . $row['id'] . '">Edit</a></td>';
         echo '<td><a href="delete.php?id='. $row['id'] . '">Delete</a></td>';
-        echo "</tr>";       
-    }
+        echo "</tr>";    
+  }
 }
 mysqli_close($conn);
 ?> 
@@ -62,4 +62,3 @@ mysqli_close($conn);
 </table>
 </body>
 </html>
-

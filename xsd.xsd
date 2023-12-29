@@ -1,0 +1,8 @@
+<?xml version="1.0" ecoding="UFT-8"?>
+<xs:notes xmlns:xs ="https://www.w3c.org/xmlschema">
+<xs:complextype>
+<xs:sequence>
+<xs:element name ="name" type="xs:string">
+</xs:complextype>
+</xs:sequence>
+</xs:notes>

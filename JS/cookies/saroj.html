@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form Validation</h2>
+
+  <form id="myForm" onsubmit="validateForm(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <span id="usernameError" class="error"></span><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordError" class="error"></span><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male"> Male
+    <input type="radio" id="female" name="gender" value="female"> Female
+    <span id="genderError" class="error"></span><br>
+
+    <label>Hobbies:</label>
+    <input type="checkbox" id="hobby" name="hobby">
+    <span id="hobbyError" class="error"></span><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevents the form from submitting by default
+
+      // Reset previous error messages
+    //   document.getElementById("usernameError").innerHTML = "";
+    //   document.getElementById("passwordError").innerHTML = "";
+    //   document.getElementById("genderError").innerHTML = "";
+    //   document.getElementById("hobbyError").innerHTML = "";
+
+      // Get form values
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var hobby = document.getElementById("hobby").checked;
+
+      // Validate Username
+      if (username.length !== 5) {
+        document.getElementById("usernameError").innerHTML = "Username must be exactly 5 characters long";
+        return false;
+      }
+
+      // Validate Password
+      if (password.length === 0) {
+        document.getElementById("passwordError").innerHTML = "Password is required";
+        return false;
+      }
+
+      // Validate Gender
+      if (!gender) {
+        document.getElementById("genderError").innerHTML = "Please select a gender";
+        return false;
+      }
+
+      // Validate Hobby
+      if (!hobby) {
+        document.getElementById("hobbyError").innerHTML = "Please select a hobby";
+        return false;
+      }
+
+      // If all validations pass, you can submit the form or perform other actions
+      alert("Form submitted successfully!");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="Validation(event)">
+    <label for="Name">Name</label>
+    <input type="text" id="Name">
+    <span id="nameError"></span>
+    <br>
+    <label>Gender</label>
+    <input type="radio" id="Male" name="gender" value="Male"/>Male
+    <input type="radio" id="Female" value="gender" value="Female">Female
+    <span></span><br>
+    <!-- <label>check</label>
+    <input type="checkbox" id="hobby" name="hobby"> -->
+
+    <input type="submit" value="submit">
+</form>
+<script>
+    function Validation(event)
+    {
+        event.preventDefault();
+        var name=document.getElementById('Name').value;
+        var selectedGender=document.querySelector('input[name="gender"]:checked');
+        var check=document.getElementById('hobby').checked;
+        // alert("Selected gender: " + selectedGender.value);
+        if(!gender)
+        {
+          alert();
+          return false;
+        }
+        if(!check)
+        {
+          alert('kjhg')
+          return false;
+        }
+      if(name.length == 0)
+      {
+        document.getElementById('nameError').innerHTML="name cannot be empty";
+        return false;
+      }
+        alert(name);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <div  onmouseover="mover(this)" onmouseout="moOut(this)"> hover here</div>
+    <button type="button" onclick="OnClick()" >alert or prompt</button>
+    <button type="button" onclick="confirmation()">confirm</button>
+    <script>
+        function confirmation()
+        {
+            confirm("are you sure want to exist");
+        }
+        function OnClick()
+        {
+            document.write("nepal is a beautiful country");
+            // alert("clicked");
+            // prompt('hello');
+        }
+        function mover(obj)
+        {
+            // alert('mouse over');
+            obj.innerHTML = "Mouse Over Me"
+        }
+        function moOut(obj)
+        {
+            obj.innerHTML="Mouse out"
+        }
+        // OnClick();
+    </script>
+</body>
+</html>
